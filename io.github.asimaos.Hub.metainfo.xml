@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.asimaos.Hub</id>
+  <name>Asima Hub</name>
+  <summary>Get Asima OS, its news and its updates</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer id="io.github.asimaos">
+    <name>Asima OS team</name>
+  </developer>
+  <description>
+    <p>Asima Hub brings you to Asima OS and keeps it up to date. It shows what Asima OS will do on
+    your PC, downloads the newest version and writes it to a USB stick, checked from start to end.</p>
+    <p>On Asima OS it downloads new versions and hands them to Asima Updater, shows the project's
+    news and what is new in each version, opens the guides and the wiki, and helps you send a
+    problem report by email.</p>
+  </description>
+  <launchable type="desktop-id">io.github.asimaos.Hub.desktop</launchable>
+  <url type="homepage">https://asimaos.pages.dev/</url>
+  <url type="bugtracker">https://github.com/asimaos/asimaos-hub/issues</url>
+  <url type="vcs-browser">https://github.com/asimaos/asimaos-hub</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/asimaos/asimaos-hub/main/screenshots/asimaos-hub-get-light.png</image>
+      <caption>What Asima OS will do on this PC</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/asimaos/asimaos-hub/main/screenshots/asimaos-hub-updates-light.png</image>
+      <caption>A new version of Asima OS is available</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/asimaos/asimaos-hub/main/screenshots/asimaos-hub-updates-downloading-dark.png</image>
+      <caption>Downloading it, checked against the release server</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/asimaos/asimaos-hub/main/screenshots/asimaos-hub-news-light.png</image>
+      <caption>What's new in each version</caption>
+    </screenshot>
+  </screenshots>
+  <categories>
+    <category>System</category>
+  </categories>
+  <requires>
+    <display_length compare="ge">768</display_length>
+  </requires>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="0.3.0" date="2026-11-25">
+      <description>
+        <p>The first version of Asima Hub: what Asima OS will do on this PC, the download and the
+        USB stick, updates handed to Asima Updater, the project's news from a signed feed, and
+        problem reports by email.</p>
+      </description>
+    </release>
+  </releases>
+</component>

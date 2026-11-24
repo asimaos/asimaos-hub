@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Asima Hub
+GenericName=Get Asima OS and its updates
+Comment=See what Asima OS does on this PC, write it to a USB stick, get its updates and news
+Exec=asimaos-hub
+Icon=io.github.asimaos.Hub
+Categories=System;PackageManager;
+Keywords=update;download;iso;usb;install;news;wiki;guide;help;changelog;report;

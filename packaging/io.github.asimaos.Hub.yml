@@ -1,0 +1,39 @@
+# Asima Hub as a Flatpak. packaging/flatpak.sh gathers the source (the Hub and Asima UI) into
+# build/flatpak/source and builds this manifest into a bundle for GitHub Releases; or, to build and
+# install it straight away, after running flatpak.sh once:
+#
+#   flatpak-builder --user --install --force-clean --state-dir=build/flatpak/state build/flatpak/app \
+#       packaging/io.github.asimaos.Hub.yml
+#
+# The feed is the website's (signed with the feed key). Bump runtime-version to the newest KDE
+# runtime on Flathub.
+app-id: io.github.asimaos.Hub
+runtime: org.kde.Platform
+runtime-version: '6.11'
+sdk: org.kde.Sdk
+command: asimaos-hub
+finish-args:
+  - --share=ipc
+  - --share=network
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  # The new-version notification; its start at sign-in goes through the Background portal.
+  - --talk-name=org.freedesktop.Notifications
+  # Updates and the ISO are saved in Downloads; Asima Updater (outside the sandbox) opens them from there.
+  - --filesystem=xdg-download
+  # Writing the ISO to a USB stick goes through UDisks, which asks for the administrator's password.
+  - --system-talk-name=org.freedesktop.UDisks2
+  # Installing a downloaded update: Asima Updater's service checks it and installs it (it asks for
+  # the administrator's password); then a restart through logind.
+  - --system-talk-name=io.github.asimaos.Updater1
+  - --system-talk-name=org.freedesktop.login1
+modules:
+  - name: asimaos-hub
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DASIMAOS_HUB_FEED=https://asimaos.pages.dev/feed/feed.json
+    sources:
+      - type: dir
+        path: ../build/flatpak/source
