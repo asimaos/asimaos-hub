@@ -22,7 +22,10 @@ QPixmap TintedIconProvider::requestPixmap(const QString &id, QSize *size, const 
     QPixmap pixmap(target);
     pixmap.fill(Qt::transparent);
 
-    const QIcon icon = QIcon::fromTheme(name);
+    QIcon icon = QIcon::fromTheme(name);
+    // An app's own icon (asked for without a tint) that the theme hasn't got: a generic program.
+    if (icon.isNull() && !tint.isValid())
+        icon = QIcon::fromTheme(QStringLiteral("application-x-executable"));
     if (icon.isNull())
         return pixmap;
 
