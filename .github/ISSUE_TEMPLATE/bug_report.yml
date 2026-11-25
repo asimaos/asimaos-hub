@@ -1,0 +1,22 @@
+name: Something doesn't work
+description: Report a problem with Asima Hub.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. A security problem? Please don't report it here: see SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: Asima Hub's version, and your system
+      description: "`flatpak info io.github.asimaos.Hub` shows the version; for example: 0.3.0 on Fedora 45."
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
