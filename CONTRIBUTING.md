@@ -15,3 +15,4 @@ stick and the system's updates; [README.md](README.md) says what it does and how
   here with the next publish. Contributions are under the [GPL-3.0-or-later](LICENSE); no sign-off
   line or extra agreement is needed.
 - A security problem? Please see [SECURITY.md](SECURITY.md), never a public issue.
+- Everyone here follows Asima OS's [code of conduct](https://github.com/asimaos/asimaos/blob/main/CODE_OF_CONDUCT.md).
