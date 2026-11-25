@@ -1,1 +1,8 @@
 build/
+# Every screen rendered by "./build.sh screenshots"; only the four the app listing shows
+# (io.github.asimaos.Hub.metainfo.xml) are kept.
+screenshots/*
+!screenshots/asimaos-hub-get-light.png
+!screenshots/asimaos-hub-updates-light.png
+!screenshots/asimaos-hub-updates-downloading-dark.png
+!screenshots/asimaos-hub-news-light.png
