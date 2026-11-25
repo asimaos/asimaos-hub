@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """The Asima OS apps' icons: one white symbol per app on the Asima Blue tile of the Asima OS mark
 (make-mark.py), so the apps look like one family and are still told apart at a glance.
-Usage: python3 make-app-icons.py OUTPUT_DIR  (writes updater.svg, maintenance.svg, …)"""
+Usage: python3 make-app-icons.py OUTPUT_DIR  (writes updater.svg, maintenance.svg, appcenter.svg, …)"""
 import os
 import sys
 
@@ -55,6 +55,15 @@ ICONS = {
     <circle cx="32" cy="15" r="5"/>
     <circle cx="17.3" cy="40.5" r="5"/>
     <circle cx="46.7" cy="40.5" r="5"/>
+  </g>'''),
+    # Four app tiles, one of them a plus: every kind of app, and getting more.
+    "appcenter": ("Asima App Center", "four app tiles", f'''  <g fill="#FFFFFF">
+    <rect x="13" y="13" width="16" height="16" rx="4.5"/>
+    <rect x="35" y="13" width="16" height="16" rx="4.5"/>
+    <rect x="13" y="35" width="16" height="16" rx="4.5"/>
+  </g>
+  <g {STROKE} stroke-width="4.5">
+    <path d="M43 35 V51 M35 43 H51"/>
   </g>'''),
     "dev": ("Asima Dev", "code brackets", f'''  <g {STROKE} stroke-width="5">
     <path d="M24 20 L12 32 L24 44"/>

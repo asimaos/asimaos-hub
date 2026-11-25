@@ -1,7 +1,7 @@
 import QtQuick
 
 // The Asima OS mark (an endless ribbon, assets/make-mark.py), or with `icon` set one of the Asima OS
-// apps' icons (assets/make-app-icons.py: updater, maintenance, manager, gaming, dev). Wrapped in an
+// apps' icons (assets/make-app-icons.py: updater, maintenance, manager, gaming, dev, appcenter). Wrapped in an
 // Item so layouts use `size`, not the SVG's pixel size.
 Item {
     id: mark

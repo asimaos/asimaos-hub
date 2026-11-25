@@ -53,6 +53,7 @@ qt_add_qml_module(asimaos_ui
         assets/apps/gaming.svg
         assets/apps/dev.svg
         assets/apps/hub.svg
+        assets/apps/appcenter.svg
     SOURCES
         asimaosui.h asimaosui.cpp
         iconprovider.h iconprovider.cpp
