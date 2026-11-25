@@ -18,8 +18,9 @@ Asima OS apps. Website: [asimaos.pages.dev](https://asimaos.pages.dev/) · the O
 | Windows | `.exe` | From the feed | Later |
 
 The Hub's own files are attached to this repository's GitHub Releases; `releases/latest/download/<file>`
-always gives the newest, and Asima Manager on Asima OS offers that link (Discover installs it). The
-installer will offer it for after the first sign-in (later).
+always gives the newest. On Asima OS, "Get Asima Hub" in Asima Manager and Asima Maintenance
+downloads it from there, and Asima App Center installs the file. The installer will offer it for
+after the first sign-in (later).
 
 | Page | Shows | Actions | Status |
 | --- | --- | --- | --- |
@@ -96,8 +97,8 @@ The feed key's public half is in `src/feedcheck.h`; a fork with its own feed put
 
 ## Releasing
 
-Until Asima Hub is on Flathub, its Flatpak is a bundle attached to a GitHub Release here; Asima
-Manager's "Get Asima Hub" opens the newest one.
+Until Asima Hub is on Flathub, its Flatpak is a bundle attached to a GitHub Release here; "Get Asima
+Hub" in Asima Manager and Asima Maintenance downloads the newest one.
 
 1. Raise `VERSION` in `CMakeLists.txt` and add a `<release>` to `io.github.asimaos.Hub.metainfo.xml`.
 2. `packaging/flatpak.sh` builds `build/flatpak/AsimaHub-x86_64.flatpak` (flatpak-builder, or
@@ -105,6 +106,10 @@ Manager's "Get Asima Hub" opens the newest one.
 3. Make a release with the tag `v<version>` and the bundle attached, as a normal release (not a
    pre-release), so that `releases/latest/download/AsimaHub-x86_64.flatpak` points at it.
 4. The bundle doesn't update itself: say in the news that a new version is out.
+
+## Credits
+
+What Asima Hub is built on, and the help it had: [CREDITS.md](CREDITS.md).
 
 ## License
 
