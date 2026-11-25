@@ -26,7 +26,6 @@ installer will offer it for after the first sign-in (later).
 | Updates (Asima OS) | The newest release from the feed, the version installed now | Download (resumes where it stopped), checked against the feed's SHA-256, then "Install now": the file goes to Asima Updater's service as a file descriptor (`VerifyUpdate`, then `ApplyUpdate` with the administrator's password), progress from its `JobProgress`/`JobFinished` signals, then "Restart now" (logind); "Open in Asima Updater" still opens the file through the desktop portal; without the service (another system) the file opens there too | Built |
 | Get Asima OS (everywhere; the first page outside Asima OS) | "What you'll get on this PC", the newest ISO, the USB sticks plugged in | Download the ISO (resumes, checked against the feed's SHA-256), write it to a USB stick (below), how to start the PC from it | Built |
 | What's new | The news, and the notes of every version with the installed one marked | Read more (a news item's link) | Built |
-| App groups (Asima OS) | System, gaming, office and Windows-compatibility apps, from Flathub or Snap | Pick apps; Asima Manager's service installs them after one password | Later |
 | Guides & wiki | Links from the feed | Open in the browser | Built |
 | Problem report | The report Asima Maintenance saved | Read and edit it, then "Save and write an email": the report is saved in Downloads and the mail app opens with the project's address from the feed | Built; the address comes once the project has one |
 
@@ -56,7 +55,7 @@ instead (the tests; without it nothing is written).
 `feed.json.sig`, made with the **feed key**. The Hub carries the feed key's public half
 (`src/feedcheck.h`, with its fingerprint) and refuses a feed whose signature doesn't verify, as a
 whole; the release key stays for the OS. The website's `scripts/make-feed` builds the feed from the
-website's news posts and its `feed/` folder (the published versions, the app groups, the links) and
+website's news posts and its `feed/` folder (the published versions, the app groups Asima App Center offers on Asima OS, the links) and
 signs it. The update file and the ISO are checked against
 the feed's SHA-256, and Asima Updater checks an update's release signature again.
 
